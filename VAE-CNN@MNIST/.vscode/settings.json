@@ -1,0 +1,5 @@
+{
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "python.analysis.completeFunctionParens": true,
+    "python.languageServer": "Pylance"
+}

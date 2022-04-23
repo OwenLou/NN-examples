@@ -1,0 +1,5 @@
+.idea
+.virtual_documents
+CVAE-MLP@MNST/data/MNIST
+VAE-CNN@MNIST/data/MNIST
+VAE-MLP@MNIST/data/MNIST
