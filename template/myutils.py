@@ -1,10 +1,17 @@
 import numpy
+import torch
 from IPython import display
 from matplotlib import pyplot as plt
 import matplotlib_inline.backend_inline
 
 
-# TODO: try_gpu()
+def check_device():
+    """apply only to cpu only or one gpu"""
+    if torch.cuda.is_available():
+        return "cuda"
+    else:
+        return "cpu"
+
 
 class Animator:
     """
