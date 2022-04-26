@@ -31,7 +31,7 @@ class MODEL(nn.Module):
             nn.Sigmoid(),
         )
 
-    def reparamerize(self, mu, logvar):
+    def reparameterize(self, mu, logvar):
         if self.training:
             return mu + torch.randn_like(mu) * torch.exp(0.5*logvar)
             # std = torch.exp(0.5*logvar)  # 0.5 mul is a must
@@ -58,7 +58,7 @@ class MODEL(nn.Module):
 
     def forward(self, x):
         mu, logvar = self.encode(x)
-        z = self.reparamerize(mu, logvar)
+        z = self.reparameterize(mu, logvar)
         return self.decode(z), mu, logvar
 
     @staticmethod
